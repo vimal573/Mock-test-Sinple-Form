@@ -84,5 +84,3 @@ function clearErrors() {
     errorElements[i].innerText = '';
   }
 }
-
-console.log('vimal');
