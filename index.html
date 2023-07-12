@@ -6,53 +6,45 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <form>
-      <h2>Application Form</h2>
-      <div class="row">
-        <label>Name</label>
-        <input type="text" name="name" />
-        <div class="error" id="nameErr"></div>
-      </div>
-      <div class="row">
-        <label>Email Address</label>
-        <input type="text" name="email" />
-        <div class="error" id="emailErr"></div>
-      </div>
-      <div class="row">
-        <label>Phone Number</label>
-        <input type="text" name="mobile" maxlength="10" />
-        <div class="error" id="mobileErr"></div>
-      </div>
-      <div class="row">
-        <label>Password</label>
-        <input type="password" name="password" />
-        <div class="error" id="password"></div>
-      </div>
-      <div class="row">
-        <label>Age</label>
-        <input type="number" name="age" />
-        <div class="error" id="age"></div>
-      </div>
-      <div class="row">
-        <label>Gender</label>
-        <div class="form-inline">
-          <label><input type="radio" name="gender" value="male" /> Male</label>
-          <label
-            ><input type="radio" name="gender" value="female" /> Female</label
-          >
-        </div>
-        <div class="error" id="genderErr"></div>
-      </div>
-      <div class="row">
-        <label>Date</label>
-        <input type="date" name="date" />
-        <div class="error" id="date"></div>
-      </div>
-      <div class="row">
-        <label>Color</label>
-        <input type="color" name="color" />
-        <div class="error" id="date"></div>
-      </div>
+    <h2>Form Validation Example</h2>
+    <form id="myForm" onsubmit="validateForm(event)">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required /><br />
+      <span id="nameError" class="error"></span><br />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required /><br />
+      <span id="emailError" class="error"></span><br />
+
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" required /><br />
+      <span id="phoneError" class="error"></span><br />
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required /><br />
+      <span id="passwordError" class="error"></span><br />
+
+      <label for="age">Age:</label>
+      <input type="number" id="age" name="age" required /><br />
+      <span id="ageError" class="error"></span><br />
+
+      <label for="gender">Gender:</label>
+      <select id="gender" name="gender" required>
+        <option value="">Select Gender</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option></select
+      ><br />
+      <span id="genderError" class="error"></span><br />
+
+      <label for="date">Date:</label>
+      <input type="date" id="date" name="date" required /><br />
+      <span id="dateError" class="error"></span><br />
+
+      <label for="color">Favorite Color:</label>
+      <input type="color" id="color" name="color" required /><br />
+      <span id="colorError" class="error"></span><br />
+
+      <input type="submit" value="Submit" />
     </form>
   </body>
 </html>
